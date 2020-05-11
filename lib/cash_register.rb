@@ -8,7 +8,15 @@ class CashRegister
     @items = []
     @last_transaction = []
   end
-
+  
+  def add_item(item, price, quantity = 1)
+          self.total += price * quantity
+          quantity.times do
+            @items << item
+          end
+          @last_transaction << [item, price, quantity]
+      end
+  
   def apply_discount
       if @employee_discount == 0
               return "There is no discount to apply."
