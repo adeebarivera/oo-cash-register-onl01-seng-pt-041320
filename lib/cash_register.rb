@@ -9,9 +9,8 @@ class CashRegister
     @last_transaction = []
   end
 
-
   def apply_discount
-          if @employee_discount == 0
+      if @employee_discount == 0
               return "There is no discount to apply."
           end
           @total -= @total * @employee_discount / 100
