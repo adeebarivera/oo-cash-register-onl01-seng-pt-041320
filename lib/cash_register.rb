@@ -16,6 +16,7 @@ class CashRegister
           @total -= @total * @employee_discount / 100
           return "After the discount, the total comes to $#{@total}."
       end
+      
       def discount
           self.employee_discount
       end
